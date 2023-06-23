@@ -15,7 +15,7 @@ describe('Context: My First Tests' , () => {
 
     })
     afterEach(() => {
-        //similar to afterMethod in TestNG
+        //similar to afterMethod in TestNG.
     })
 
     it('Opening a web application' , () => {
