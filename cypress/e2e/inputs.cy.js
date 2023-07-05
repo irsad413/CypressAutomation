@@ -85,6 +85,22 @@ describe('Input Form Tests' , () => {
          })
     })
 
+    it.skip('Check selection of a single choice from a select dropdown' , () => {
+
+        // select one element
+        cy.get('select[name="job_title"]').select("SDET") ; 
+        // assert that dropdown has correct text after selecting
+        cy.get('select[name="job_title"]').contains("SDET") ; 
+
+        
+    })
+
+    it('Check selection of all select dropdowns options' , () => {
+        // we will provide our test data through fixture folder as JSON object , then use that data to verify select values
+
+
+    })
+
 
 
    
