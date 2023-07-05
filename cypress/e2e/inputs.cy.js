@@ -39,6 +39,34 @@ describe('Input Form Tests' , () => {
        
     })
 
+    it.skip('Check different radio button actions' , () => {
+
+        cy.get('.radio')
+        .find('[type=radio]')
+        .then((radio => {
+            // get all radio buttons , select the first one and verify that it is checked
+
+            cy.wrap(radio).first().check().should('be.checked') ;  // cypress works in a chainable functions struture
+
+            /**
+             * radio : is Jquery element , cy.wrap(radio) : turns it into Cypress object so that I can use cypress functions
+             * first() : selects first element
+             * check() : checks it out 
+             * should() : verifes whatever i provide as parameter 'be.checked'
+             */
+
+            // get all radio buttons , select the second one and verify that it is checked and confirmation label is visible
+            cy.wrap(radio).eq(1).check().should('be.checked') ; 
+            cy.get('[data-bv-icon-for="gender"]').should('be.visible') ; // common function used in tests
+            // Third radio buttons is NOT checked
+            cy.wrap(radio).eq(2).should('not.be.checked') ; 
+            
+            
+        }))
+
+
+    })
+
 
 
    
