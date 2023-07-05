@@ -67,6 +67,24 @@ describe('Input Form Tests' , () => {
 
     })
 
+    it.skip('Check different checkbox actions' , () => {
+
+        //get all checkboxes , select JAVA and verify
+
+         cy.get('[type="checkbox"]').then((checkbox) => {
+
+            cy.wrap(checkbox).eq(1).check().should('be.checked') ; 
+
+            // uncheck JAVA
+            cy.wrap(checkbox).eq(1).uncheck().should('not.be.checked') ; 
+            // verify third one has a value Javascript and then check and verify
+            cy.wrap(checkbox).eq(2)
+            .should('have.value' , 'javascript')
+            .check().should('be.checked')  ; 
+
+         })
+    })
+
 
 
    
