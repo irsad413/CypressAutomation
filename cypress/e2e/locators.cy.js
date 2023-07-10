@@ -46,7 +46,7 @@ describe('Find or get elements by using different locators' , () => {
       cy.get('input[name="username"]').parents('form').find('button').should('contain' ,'Login' ).click() ; 
     })
 
-     it.only('Check Diffrent Type of Assertions' , () => {
+     it('Check Diffrent Type of Assertions' , () => {
 
       //cypress itself bundles assertions provided by Chai , Sinon and jQuery libraries
       //Should Assertion : does the assertion directly on the object itself

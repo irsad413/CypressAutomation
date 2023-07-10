@@ -10,7 +10,7 @@ describe('Input Form Tests' , () => {
     })
   
 
-    it.skip('Check different input box fields and verify' , () => {
+    it('Check different input box fields and verify' , () => {
       // fill the form for username and other info
 
       cy.get('input[name="firstname"]').type('Kobe') ; 
@@ -39,7 +39,7 @@ describe('Input Form Tests' , () => {
        
     })
 
-    it.skip('Check different radio button actions' , () => {
+    it('Check different radio button actions' , () => {
 
         cy.get('.radio')
         .find('[type=radio]')
@@ -67,7 +67,7 @@ describe('Input Form Tests' , () => {
 
     })
 
-    it.skip('Check different checkbox actions' , () => {
+    it('Check different checkbox actions' , () => {
 
         //get all checkboxes , select JAVA and verify
 
@@ -85,7 +85,7 @@ describe('Input Form Tests' , () => {
          })
     })
 
-    it.skip('Check selection of a single choice from a select dropdown' , () => {
+    it('Check selection of a single choice from a select dropdown' , () => {
 
         // select one element
         cy.get('select[name="job_title"]').select("SDET") ; 

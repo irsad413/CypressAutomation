@@ -19,7 +19,7 @@ describe('Cypress web table tests' , { baseUrl: 'https://demoqa.com'} , () => {
         cy.visit('/webtables')  ;
     })
 
-        it.skip('Check finding and editing a record' , () => {
+        it('Check finding and editing a record' , () => {
             // locate table body - then navigate through this element to find Alden , then update info with anather person
             // 1.get me table body
             // 2.get me the row that contains Alden
@@ -41,7 +41,7 @@ describe('Cypress web table tests' , { baseUrl: 'https://demoqa.com'} , () => {
      
             }) ; 
 
-            it.skip('Check finding and deleting a record' , () => {
+            it('Check finding and deleting a record' , () => {
 
                 cy.get('.rt-tbody') 
                 .contains('.rt-tr-group' , 'Alden') 
@@ -67,7 +67,7 @@ describe('Cypress web table tests' , { baseUrl: 'https://demoqa.com'} , () => {
          
                 }) ; 
 
-                it.skip('Check search for different age records' , () => {
+                it('Check search for different age records' , () => {
 
                 // define age groups 
                 const ageGroup = [29 ,39,45,77]  ; 
@@ -96,13 +96,13 @@ describe('Cypress web table tests' , { baseUrl: 'https://demoqa.com'} , () => {
              
                     }) ; 
 
-                    xit('Check adding a new record - Bad code practice' , () => {
+                    it('Check adding a new record - Bad code practice' , () => {
                         // click on add button 
                         cy.get('#addNewRecordButton').click() ; 
                         // fill form 
                         cy.get('#firstName').type('Kobe') ; 
                         cy.get('#lastName').type('Bryant') ; 
-                        cy.get('#userEmail').type('kobe@0824@lakers.com') ; 
+                        cy.get('#userEmail').type('kobe0824@example.com') ; 
                         cy.get('#age').type('43') ; 
                         cy.get('#salary').type('300000') ; 
                         cy.get('#department').type('lagal') ; 
@@ -113,12 +113,12 @@ describe('Cypress web table tests' , { baseUrl: 'https://demoqa.com'} , () => {
                         .contains('.rt-tr-group' , 'Kobe')
                         .then((row) => {
 
-                            cy.wrap(row).find('rt-td').eq(0).should('contain' , 'Kobe') ; 
-                            cy.wrap(row).find('rt-td').eq(1).should('contain' , 'Bryant') ; 
-                            cy.wrap(row).find('rt-td').eq(2).should('contain' , '43') ; 
-                            cy.wrap(row).find('rt-td').eq(3).should('contain' , 'kobe0824@example.com') ;       
-                            cy.wrap(row).find('rt-td').eq(4).should('contain' , '300000') ; 
-                            cy.wrap(row).find('rt-td').eq(5).should('contain' , 'lagal') ; 
+                            cy.wrap(row).find('.rt-td').eq(0).should('contain' , 'Kobe') ; 
+                            cy.wrap(row).find('.rt-td').eq(1).should('contain' , 'Bryant') ; 
+                            cy.wrap(row).find('.rt-td').eq(2).should('contain' , '43') ; 
+                            cy.wrap(row).find('.rt-td').eq(3).should('contain' , 'kobe0824@example.com') ;       
+                            cy.wrap(row).find('.rt-td').eq(4).should('contain' , '300000') ; 
+                            cy.wrap(row).find('.rt-td').eq(5).should('contain' , 'lagal') ; 
                           
 
                         })
