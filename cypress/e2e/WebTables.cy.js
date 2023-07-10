@@ -115,8 +115,8 @@ describe('Cypress web table tests' , { baseUrl: 'https://demoqa.com'} , () => {
 
                             cy.wrap(row).find('rt-td').eq(0).should('contain' , 'Kobe') ; 
                             cy.wrap(row).find('rt-td').eq(1).should('contain' , 'Bryant') ; 
-                            cy.wrap(row).find('rt-td').eq(2).should('contain' , 'kobe0824@example.com') ; 
-                            cy.wrap(row).find('rt-td').eq(3).should('contain' , '43') ; 
+                            cy.wrap(row).find('rt-td').eq(2).should('contain' , '43') ; 
+                            cy.wrap(row).find('rt-td').eq(3).should('contain' , 'kobe0824@example.com') ;       
                             cy.wrap(row).find('rt-td').eq(4).should('contain' , '300000') ; 
                             cy.wrap(row).find('rt-td').eq(5).should('contain' , 'lagal') ; 
                           

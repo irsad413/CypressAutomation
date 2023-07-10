@@ -1,9 +1,9 @@
 {
     "user1" : {
         "firstName" : "Kobe" , 
-        "lastName" : "Bryant" , 
-        "userEmail" : "kobe0824@example.com" , 
+        "lastName" : "Bryant" ,  
         "age" : "43" , 
+        "userEmail" : "kobe0824@example.com" , 
         "salary" : "300000" , 
         "department" : "legal" 
     }
