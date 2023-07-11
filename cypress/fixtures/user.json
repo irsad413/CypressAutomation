@@ -6,5 +6,11 @@
         "userEmail" : "kobe0824@example.com" , 
         "salary" : "300000" , 
         "department" : "legal" 
+    } , 
+
+    "user2" : {
+        "username" : "tomsmith" , 
+        "password" : "SuperSecretPassword"
+
     }
 }
